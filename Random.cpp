@@ -84,8 +84,6 @@ namespace lcore
 
             GlobalMemoryStatusEx(&memstat);
             u32 memoryBytes = static_cast<u32>(memstat.ullAvailPhys & 0xFFFFFFFFU);
-            u32 other = ( (discBytes<<16) | (memoryBytes & 0xFFFFU));
-
 #else
             struct sysinfo info;
             sysinfo(&info);
